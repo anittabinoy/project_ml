@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Models Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="text-center mb-5 fade-in">
+            <h1 class="display-4 mb-3">Machine Learning Models</h1>
+            <p class="lead text-muted">Select a model to explore predictions and analysis</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="list-group fade-in">
+                    <a href="{{ url_for('simple_linear') }}" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-chart-line fa-2x text-primary me-3"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h3>Simple Linear Regression</h3>
+                                <p class="mb-0">House Price Prediction based on Area</p>
+                            </div>
+                            <div class="ms-3">
+                                <i class="fas fa-chevron-right text-primary"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="{{ url_for('multiple_linear') }}" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-chart-bar fa-2x text-primary me-3"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h3>Multiple Linear Regression</h3>
+                                <p class="mb-0">House Price Prediction based on Multiple Features</p>
+                            </div>
+                            <div class="ms-3">
+                                <i class="fas fa-chevron-right text-primary"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="{{ url_for('polynomial') }}" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-temperature-high fa-2x text-primary me-3"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h3>Polynomial Regression</h3>
+                                <p class="mb-0">Temperature Prediction based on Time</p>
+                            </div>
+                            <div class="ms-3">
+                                <i class="fas fa-chevron-right text-primary"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="{{ url_for('knn_page') }}" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-graduation-cap fa-2x text-primary me-3"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h3>KNN Regression</h3>
+                                <p class="mb-0">Student Score Prediction</p>
+                            </div>
+                            <div class="ms-3">
+                                <i class="fas fa-chevron-right text-primary"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="{{ url_for('logistic') }}" class="list-group-item list-group-item-action">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-user-graduate fa-2x text-primary me-3"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h3>Logistic Regression</h3>
+                                <p class="mb-0">Student Admission Prediction</p>
+                            </div>
+                            <div class="ms-3">
+                                <i class="fas fa-chevron-right text-primary"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
